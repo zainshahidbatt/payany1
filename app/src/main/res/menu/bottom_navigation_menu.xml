@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/accounts"
+        android:icon="@drawable/ic_icon_tab_accounts"
+        android:title="Accounts" />
+
+    <item
+        android:id="@+id/payments"
+        android:icon="@drawable/ic_icon_tab_payments"
+        android:title="Payments" />
+    <item
+        android:id="@+id/favorites"
+        android:icon="@drawable/ic_icon_tab_favourites"
+        android:title="Favorites" />
+
+</menu>

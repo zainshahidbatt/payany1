@@ -1,0 +1,75 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_16sdp"
+    android:layout_marginBottom="@dimen/_15sdp"
+    android:focusable="false"
+    app:cardBackgroundColor="#f9f9f9"
+    app:cardCornerRadius="@dimen/_14sdp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_13sdp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_28sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/aspira_regular"
+            android:letterSpacing="0"
+            android:textColor="@color/woodsmoke"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Name of Person" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAccountNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_28sdp"
+            android:fontFamily="@font/aspira_regular"
+            android:textColor="@color/santas_grey"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPersonName"
+            tools:text="Account Number" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_28sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:fontFamily="@font/aspira_demi"
+            android:letterSpacing="0"
+            android:text="@string/pkr"
+            android:textColor="@color/malibu"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintBottom_toBottomOf="@id/tvAmount"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_49sdp"
+            android:fontFamily="@font/aspira_demi"
+            android:letterSpacing="0"
+            android:textColor="@color/woodsmoke"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAccountNo"
+            tools:text="Amount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

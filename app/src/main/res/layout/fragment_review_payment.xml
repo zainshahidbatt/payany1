@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icProfile"
+        style="@style/ShapeAppearance.Material3.Corner.Large"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_38sdp"
+        android:background="@drawable/ic_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Circle" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icBack"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginEnd="@dimen/_9sdp"
+        android:background="@drawable/icon_back"
+        app:layout_constraintBottom_toBottomOf="@+id/icProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/icProfile" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:fontFamily="@font/aspira_bold"
+        android:text="Review Payment"
+        android:textColor="#0f1011"
+        android:textSize="@dimen/_23ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icProfile" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:backgroundTint="@color/white"
+        android:drawableEnd="@drawable/icon_button_add"
+        android:fontFamily="@font/aspira_demi"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0"
+        android:text="@string/schedule"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:cornerRadius="@dimen/_17sdp"
+        app:iconGravity="start"
+        app:iconPadding="@dimen/_1sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/materialTextView"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <include
+        android:id="@+id/payment_review"
+        layout="@layout/payment_review_component"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/_17sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_83sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:fontFamily="@font/aspira_demi"
+            android:text="@string/rs_dot"
+            android:textColor="#4ebeff"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:fontFamily="@font/aspira_regular"
+            android:text="@string/_10000"
+            android:textColor="#0f1011"
+            android:textSize="@dimen/_28ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <include
+            android:id="@+id/btn_continue"
+            layout="@layout/button_component"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

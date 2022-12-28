@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icProfile"
+        style="@style/ShapeAppearance.Material3.Corner.Large"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_38sdp"
+        android:background="@drawable/ic_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Circle" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icBack"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginEnd="@dimen/_9sdp"
+        android:background="@drawable/icon_back"
+        app:layout_constraintBottom_toBottomOf="@+id/icProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/icProfile" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:fontFamily="@font/aspira_bold"
+        android:text="@string/my_payees"
+        android:textColor="#0f1011"
+        android:textSize="@dimen/_23ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icProfile" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:backgroundTint="@color/white"
+        android:drawableEnd="@drawable/icon_button_add"
+        android:fontFamily="@font/aspira_demi"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:cornerRadius="@dimen/_17sdp"
+        app:iconGravity="start"
+        app:iconPadding="@dimen/_1sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/materialTextView"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:fontFamily="@font/aspira_medium"
+        android:text="@string/favorites"
+        android:textColor="#9d9fa4"
+        app:layout_constraintStart_toStartOf="@+id/materialTextView"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favouriteRV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView2"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:itemCount="3"
+        tools:listitem="@layout/favourite_component" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:fontFamily="@font/aspira_medium"
+        android:text="@string/people"
+        android:textColor="#9d9fa4"
+        app:layout_constraintStart_toStartOf="@+id/materialTextView2"
+        app:layout_constraintTop_toBottomOf="@+id/favouriteRV"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/transparent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnAdd"
+        app:layout_constraintStart_toStartOf="@+id/materialTextView3"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

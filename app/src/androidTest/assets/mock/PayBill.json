@@ -1,0 +1,8 @@
+{
+  "Response": "0",
+  "strReturnMessage": " You have requested to transfer PKR 500.00 from your A/C No. 060510945554 (Kashif Munir [1094555-4]) to  AN Home Store",
+  "lblTransactionType": "",
+  "lblTransAmount": "",
+  "IsOtpRequired": "1",
+  "OtpMessage": "OTP Generated Successfully"
+}

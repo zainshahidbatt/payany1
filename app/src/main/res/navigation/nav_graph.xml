@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashBoardFragment">
+
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.example.payany1.ui.dashboard.DashBoardFragment"
+        android:label="fragment_dash_board"
+        tools:layout="@layout/fragment_dash_board">
+        <action
+            android:id="@+id/action_dashBoardFragment_to_payee_details_fragment"
+            app:destination="@id/payee_details_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/payee_details_fragment"
+        android:name="com.example.payany1.ui.payee_details.PayeeDetailsFragment"
+        android:label="fragment_payee_details_fragment"
+        tools:layout="@layout/fragment_payee_details_fragment">
+
+        <action
+            android:id="@+id/action_payee_details_fragment_to_payToAnyonePayFragment"
+            app:destination="@id/payToAnyonePayFragment" />
+        <argument
+            android:name="payeeDetails"
+            app:argType="com.example.payany1.data.models.PayeeData" />
+    </fragment>
+    <fragment
+        android:id="@+id/payToAnyonePayFragment"
+        android:name="com.example.payany1.ui.paytoany.PayToAnyonePayFragment"
+        android:label="fragment_pay_to_anyone_pay"
+        tools:layout="@layout/fragment_pay_to_anyone_pay">
+        <action
+            android:id="@+id/action_payToAnyonePayFragment_to_enter_Amount_Fragment"
+            app:destination="@id/enter_Amount_Fragment" />
+        <argument
+            android:name="payeeDetails"
+            app:argType="com.example.payany1.data.models.PayeeData" />
+    </fragment>
+    <fragment
+        android:id="@+id/enter_Amount_Fragment"
+        android:name="com.example.payany1.ui.enterammount.EnterAmountFragment"
+        android:label="fragment_enter__amount_"
+        tools:layout="@layout/fragment_enter__amount_" >
+        <action
+            android:id="@+id/action_enter_Amount_Fragment_to_reviewPaymentFragment"
+            app:destination="@id/reviewPaymentFragment" />
+        <argument
+            android:name="payeeDetials"
+            app:argType="com.example.payany1.data.models.PayeeData" />
+        <argument
+            android:name="accountData"
+            app:argType="com.example.payany1.data.models.AccountData" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewPaymentFragment"
+        android:name="com.example.payany1.ui.reviewpayment.ReviewPaymentFragment"
+        android:label="fragment_review_payment"
+        tools:layout="@layout/fragment_review_payment" >
+        <argument
+            android:name="amount"
+            app:argType="string" />
+        <argument
+            android:name="senderData"
+            app:argType="com.example.payany1.data.models.AccountData" />
+        <argument
+            android:name="receiverData"
+            app:argType="com.example.payany1.data.models.PayeeData" />
+    </fragment>
+</navigation>

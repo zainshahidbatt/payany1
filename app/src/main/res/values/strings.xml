@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">payany1</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_payees">My Payees</string>
+    <string name="add">Add</string>
+    <string name="favorites">Favorites</string>
+    <string name="people">People</string>
+    <string name="pay_from">Pay From</string>
+    <string name="pay_to">Pay To</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="payee_name">Payee Name</string>
+    <string name="rs">Rs.</string>
+    <string name="_0">0</string>
+    <string name="add_comment">Add Comment</string>
+    <string name="shedule">Shedule</string>
+    <string name="account_number">Account Number</string>
+    <string name="payto">Pay to</string>
+    <string name="accountnumber">Account Number</string>
+    <string name="bank">Bank</string>
+    <string name="_10000">10000</string>
+    <string name="rs_dot">Rs.</string>
+    <string name="date">Date</string>
+    <string name="schedule">Schedule</string>
+    <string name="_ocontinue">Continue</string>
+    <string name="_continue">Continue</string>
+    <string name="_account">Account</string>
+    <string name="ubl_branch_account">ubl_branch_account</string>
+    <string name="pkr">pkr</string>
+    <string name="dash">-</string>
+    <string name="_account_number">Account Number</string>
+    <string name="_bank">Bank</string>
+    <string name="_delete">delete</string>
+    <string name="_date">Date</string>
+    <string name="your_payment_has_been_processed">Your payment has been processed</string>
+    <string name="amount_sent">Amount sent</string>
+    <string name="_your_payment_has_been_processed">Your payment has been processed</string>
+    <string name="_check_your_payment_status_in_payments_history">Check your payment status in payments history</string>
+    <string name="_paid_to">Paid to</string>
+    <string name="_paid_from">Paid From</string>
+    <string name="_share">Share</string>
+    <string name="__account">Account</string>
+    <string name="__my_payees">My Payees</string>
+</resources>

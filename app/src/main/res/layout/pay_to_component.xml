@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_23sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/payee_details_gradient"
+            android:paddingTop="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/TexView.Demi.Woodsmoke.20sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:layout_marginEnd="@dimen/_17sdp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Name" />
+
+            <TextView
+                android:id="@+id/an"
+                style="@style/TexView.Regular.White.15.8sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/_account_number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintStart_toStartOf="@+id/name"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <TextView
+                android:id="@+id/account_number"
+                style="@style/TexView.Medium.SantasGrey.12sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/aspira_medium"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintStart_toStartOf="@+id/an"
+                app:layout_constraintTop_toBottomOf="@+id/an"
+                tools:text="Number" />
+
+            <TextView
+                android:id="@+id/bank"
+                style="@style/TexView.Regular.White.15.8sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="@string/_bank"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintStart_toStartOf="@+id/an"
+                app:layout_constraintTop_toBottomOf="@+id/account_number" />
+
+            <TextView
+                android:id="@+id/bank_name"
+                style="@style/TexView.Medium.SantasGrey.12sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/aspira_medium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintStart_toStartOf="@id/bank"
+                app:layout_constraintTop_toBottomOf="@+id/bank"
+                tools:text="Bank Name" />
+
+            <TextView
+                android:id="@+id/date"
+                style="@style/TexView.Regular.White.15.8sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="@string/_date"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/an"
+                app:layout_constraintTop_toBottomOf="@+id/bank" />
+
+            <TextView
+                android:id="@+id/date_value"
+                style="@style/TexView.Medium.SantasGrey.12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/aspira_medium"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/date"
+                app:layout_constraintStart_toEndOf="@+id/date"
+                app:layout_constraintTop_toTopOf="@+id/date"
+                tools:text="Date of Transfer" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                style="@style/ImageView.Mask"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

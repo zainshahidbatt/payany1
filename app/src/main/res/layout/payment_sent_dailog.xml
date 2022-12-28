@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivDialog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivCross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="@id/ivDialog"
+        app:layout_constraintTop_toTopOf="@id/ivDialog"
+        app:srcCompat="@drawable/ic_search_cancel" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivCredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_13sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCross"
+        app:srcCompat="@drawable/ic_success" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/aspira_demi"
+        android:letterSpacing="0"
+        android:text="@string/your_payment_has_been_processed"
+        android:textAlignment="center"
+        android:textColor="@color/woodsmoke"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCredit" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAmountSent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:fontFamily="@font/aspira_regular"
+        android:letterSpacing="0"
+        android:text="@string/amount_sent"
+        android:textAlignment="center"
+        android:textColor="@color/bombay"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSuccess" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:fontFamily="@font/aspira_bold"
+        android:letterSpacing="0"
+        android:text="@string/_your_payment_has_been_processed"
+        android:textAlignment="center"
+        android:textColor="@color/woodsmoke"
+        android:textSize="@dimen/_23ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAmountSent"
+        tools:text="2,000.00" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPaymentStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:fontFamily="@font/aspira_regular"
+        android:letterSpacing="0"
+        android:text="@string/_check_your_payment_status_in_payments_history"
+        android:textAlignment="center"
+        android:textColor="@color/shuttle_grey"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAmount" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/aspira_regular"
+        android:letterSpacing="0"
+        android:textAlignment="center"
+        android:textColor="@color/bombay"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPaymentStatus"
+        tools:text="12 November, 2020" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPaidTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/aspira_regular"
+        android:letterSpacing="0"
+        android:text="@string/_paid_to"
+        android:textAlignment="center"
+        android:textColor="@color/bombay"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSenderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aspira_bold"
+        android:letterSpacing="0"
+        android:textAlignment="center"
+        android:textColor="@color/woodsmoke"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPaidTo"
+        tools:text="Nida Ali" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSenderAcNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aspira_regular"
+        android:letterSpacing="0"
+        android:textAlignment="center"
+        android:textColor="@color/bombay"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSenderName"
+        tools:text="Account Number" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPaidFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/aspira_regular"
+        android:letterSpacing="0"
+        android:text="@string/_paid_from"
+        android:textAlignment="center"
+        android:textColor="@color/bombay"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSenderAcNo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvReceiverName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aspira_bold"
+        android:letterSpacing="0"
+        android:textAlignment="center"
+        android:textColor="@color/woodsmoke"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPaidFrom"
+        tools:text="Nida Ali" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvReceiverAcNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aspira_regular"
+        android:letterSpacing="0"
+        android:textAlignment="center"
+        android:textColor="@color/bombay"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvReceiverName"
+        tools:text="Account Number" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_9sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:drawableEnd="@drawable/ic_icon_button_edit"
+        android:focusable="true"
+        android:fontFamily="@font/aspira_demi"
+        android:letterSpacing="0"
+        android:stateListAnimator="@null"
+        android:text="@string/_share"
+        android:textAllCaps="false"
+        android:textColor="@color/woodsmoke"
+        android:textSize="@dimen/_13ssp"
+        app:backgroundTint="@color/mischka"
+        app:cornerRadius="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/ivDialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvReceiverAcNo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

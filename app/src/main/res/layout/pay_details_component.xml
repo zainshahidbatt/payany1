@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/details_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_31sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gradient_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/payee_details_gradient"
+            android:paddingBottom="@dimen/_15sdp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:background="#66000000"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Circle" />
+
+
+
+            <TextView
+                android:id="@+id/payee_name"
+                style="@style/TexView.Demi.Woodsmoke.20sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#FFF"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintEnd_toEndOf="@id/delete"
+                app:layout_constraintStart_toStartOf="@+id/profile_image"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image"
+                tools:text="Payee Name" />
+
+            <TextView
+                android:id="@+id/lbl_account_number"
+                style="@style/TexView.Regular.White.15.8sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/_account_number"
+                android:textColor="#FFF"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="@id/delete"
+                app:layout_constraintStart_toStartOf="@+id/payee_name"
+                app:layout_constraintTop_toBottomOf="@+id/payee_name" />
+
+            <TextView
+                android:id="@+id/account_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:fontFamily="@font/aspira_medium"
+                android:maxLines="1"
+                android:scrollbarSize="@dimen/_10ssp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@id/delete"
+                app:layout_constraintStart_toStartOf="@+id/lbl_account_number"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_account_number"
+                tools:text="89997699870987" />
+
+            <TextView
+                android:id="@+id/lbl_bank_name"
+                style="@style/TexView.Regular.White.15.8sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/_bank"
+                android:textColor="#FFF"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="@id/delete"
+                app:layout_constraintStart_toStartOf="@+id/account_number"
+                app:layout_constraintTop_toBottomOf="@+id/account_number" />
+
+            <TextView
+                android:id="@+id/bank_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/aspira_medium"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@id/delete"
+                app:layout_constraintStart_toStartOf="@+id/lbl_bank_name"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_bank_name"
+                tools:text="Standard Chartered Bank" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/delete"
+                style="@style/ShapeAppearanceOverlay.Circle"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:layout_marginEnd="@dimen/_17sdp"
+                android:backgroundTint="@color/white"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:letterSpacing="0"
+                android:text="@string/_delete"
+                android:textSize="@dimen/_12ssp"
+                app:cornerRadius="@dimen/_17sdp"
+                app:icon="@drawable/ic_icon_delete_payee"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="#F44336"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

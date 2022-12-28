@@ -1,0 +1,58 @@
+{
+  "Response": "0",
+  "outdtData": null,
+  "outdtDataset": {
+    "PayeePayDetail": [
+      {
+        "USER_ACCOUNT_ID": 25666476.0,
+        "ACCOUNT_NO": "03339600298",
+        "CDG": null,
+        "BRANCH_CODE": null,
+        "ACCOUNT_NAME": "MUHAMMAD BILAL",
+        "LAST_PAY_DATE": "13-Jun-2022",
+        "BENEFICIARY_ID": null,
+        "TT_NAME": "IBFT",
+        "BANK_NAME": "Easypaisa/Telenor Bank",
+        "BANK_IMD": "639390",
+        "DEBITABLE_ACC_TYPES": "|CM|RF|OR|SY|",
+        "EMAIL": null,
+        "RELATIONSHIPBENEFICIARY": "3",
+        "BENEFICIARYMOBILE": null,
+        "BENENAME": "MUHAMMAD BILAL",
+        "FINAL_BENE_IBAN": "03339600298",
+        "FINAL_BENE_NAME_IBFT": "MUHAMMAD BILAL",
+        "SEARCHBYTYPE": null,
+        "RAAST_ALIAS": null,
+        "RAAST_MEMBER_ID": null,
+        "RAAST_IBAN": null
+      }
+    ]
+  },
+  "outdsIBFTRelation": {},
+  "outStrIBFTRelation": "3",
+  "outdsIBFTPOT": {
+    "Table": [
+      {
+        "IBFT_POT_ID": 1.0,
+        "IBFT_POT_DESC": "Family Support",
+        "IS_ACTIVE": 1.0
+      },
+      {
+        "IBFT_POT_ID": 2.0,
+        "IBFT_POT_DESC": "Business",
+        "IS_ACTIVE": 1.0
+      },
+      {
+        "IBFT_POT_ID": 3.0,
+        "IBFT_POT_DESC": "Investment",
+        "IS_ACTIVE": 1.0
+      },
+      {
+        "IBFT_POT_ID": 4.0,
+        "IBFT_POT_DESC": "Other",
+        "IS_ACTIVE": 1.0
+      }
+    ]
+  },
+  "strReturnMessage": "Success"
+}

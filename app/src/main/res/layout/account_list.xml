@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#f3f3f3">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_73sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_17sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/payee_image_view"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:background="#e6e7e9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Circle" />
+
+
+            <TextView
+                android:id="@+id/name_of_person"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/aspira_bold"
+                android:maxLines="2"
+                android:textColor="#515357"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toTopOf="@+id/account_number"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/payee_image_view"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Name of person" />
+
+            <TextView
+                android:id="@+id/account_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/aspira_demi"
+                android:maxLines="1"
+                android:textColor="#515357"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toTopOf="@+id/bank_name"
+                app:layout_constraintEnd_toEndOf="@+id/name_of_person"
+                app:layout_constraintStart_toStartOf="@+id/name_of_person"
+                app:layout_constraintTop_toBottomOf="@+id/name_of_person"
+                tools:text="Account Number" />
+
+            <TextView
+                android:id="@+id/bank_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/aspira_medium"
+                android:maxLines="1"
+                android:textColor="#9D9FA4"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/account_number"
+                app:layout_constraintStart_toStartOf="@+id/name_of_person"
+                app:layout_constraintTop_toBottomOf="@+id/account_number"
+                tools:text="Bank"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                style="@style/ImageView.Mask"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.cardview.widget.CardView>

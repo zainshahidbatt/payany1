@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:paddingHorizontal="@dimen/_15sdp">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/top_profile_component" />
+
+    <TextView
+        android:id="@+id/payee_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_17sdp"
+        android:fontFamily="@font/aspira_medium"
+        android:text="@string/payee_name"
+        android:textColor="#9d9fa4"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/l_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ccy"
+                style="@style/TexView.Demi.ShuttleGrey.14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/rs"
+                android:textColor="#9d9fa4"
+                android:textSize="@dimen/_10ssp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:backgroundTint="#00000000"
+                android:fontFamily="@font/aspira_demi"
+                android:hint="@string/_0"
+                android:imeOptions="actionDone"
+                android:includeFontPadding="false"
+                android:inputType="number"
+                android:maxLength="9"
+                android:minWidth="@dimen/_20sdp"
+                android:padding="0dp"
+                android:textColor="#0f1011"
+                android:textSize="@dimen/_50ssp" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@id/l_amount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:background="@drawable/shape_add_comment"
+            android:fontFamily="@font/aspira_medium"
+            android:hint="@string/add_comment"
+            android:imeOptions="actionDone"
+            android:inputType="textNoSuggestions"
+            android:maxLength="50"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:textColor="@color/woodsmoke"
+            android:textColorHint="@color/woodsmoke"
+            android:textSize="@dimen/_10ssp"
+            tools:text="" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/component_proceed_to_pay"
+        layout="@layout/button_component" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

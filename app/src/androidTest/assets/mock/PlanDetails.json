@@ -1,0 +1,32 @@
+{
+  "Response": "1",
+  "strReturnMessage": "SUCCESS",
+  "dt": [
+    {
+      "Plan_Id": "35",
+      "Plan_Name": "You Protect Takaful Plan",
+      "Comp_Name": "JLI Takaful",
+      "Plan_Type": "Takaful",
+      "Term": "One Year",
+      "Annual_Premium": "PKR 7000",
+      "Hospitalization": "PKR 5000",
+      "accidental_death_ben": "500000",
+      "natural_death_ben": "250000",
+      "ICU": "PKR 10000",
+      "Description": "The You Protect Plan financially protect your loved  ones  in an unfortunate event of natural and accidental death or hospitalization."
+    },
+    {
+      "Plan_Id": "34",
+      "Plan_Name": "You Protect Plan",
+      "Comp_Name": "NJI",
+      "Plan_Type": "Conventional",
+      "Term": "One Year",
+      "Annual_Premium": "PKR 7000",
+      "accidental_death_ben": "500000",
+      "natural_death_ben": "250000",
+      "Hospitalization": "PKR 5000",
+      "ICU": "PKR 10000",
+      "Description": "The You Protect Plan financially protect your loved  ones  in an unfortunate event of natural and accidental death or hospitalization."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:clipToPadding="false"
+    android:paddingStart="@dimen/_15sdp"
+    android:paddingTop="@dimen/_15sdp"
+    android:paddingEnd="@dimen/_17sdp">
+
+    <include
+        android:id="@+id/top_component"
+        layout="@layout/top_profile_component"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/component_payee_details"
+        layout="@layout/pay_details_component"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_component" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/transaction_history"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/aspira_demi"
+        android:gravity="start|center_vertical"
+        android:letterSpacing="0"
+        android:stateListAnimator="@null"
+        android:text="@string/transaction_history"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:backgroundTint="#e6e7e9"
+        app:cornerRadius="@dimen/_25sdp"
+        app:icon="@drawable/ic_icon_transaction_history"
+        app:iconGravity="start"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/component_payee_details"
+        app:layout_constraintStart_toStartOf="@+id/component_payee_details"
+        app:layout_constraintTop_toBottomOf="@+id/component_payee_details" />
+
+
+    <include
+        android:id="@+id/btn_continue"
+        layout="@layout/button_component"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

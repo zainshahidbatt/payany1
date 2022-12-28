@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/cvAmountCardShadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="@id/cvSelection"
+        app:layout_constraintEnd_toEndOf="@id/cvSelection"
+        app:layout_constraintStart_toStartOf="@id/cvSelection"
+        app:layout_constraintTop_toBottomOf="@id/cvSelection" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_14sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/_17sdp"
+            android:paddingBottom="@dimen/_17sdp"
+            app:layout_constraintHeight_max="@dimen/_200sdp">
+
+            <View
+                android:id="@+id/select_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:visibility="gone"
+                app:closeIcon="@drawable/ic_search_cancel"
+                app:iconifiedByDefault="true"
+                app:layout_constraintBottom_toBottomOf="@id/select_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/select_item"
+                app:queryBackground="@color/transparent"
+                app:searchIcon="@drawable/ic_search"
+                tools:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/icon_selection_type"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@drawable/circle_shape_white"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_5sdp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/select_item"
+                app:layout_constraintStart_toEndOf="@+id/search_view"
+                app:layout_constraintTop_toTopOf="@id/select_item"
+                app:layout_goneMarginEnd="@dimen/_30sdp"
+                app:layout_goneMarginStart="@dimen/_15sdp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Circle"
+                app:srcCompat="@drawable/ic_select_icon"
+                tools:visibility="visible" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:src="@drawable/ic_forward"
+                android:tint="@color/lochmara"
+                app:layout_constraintBottom_toBottomOf="@id/select_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/select_item" />
+
+            <TextView
+                android:id="@+id/selection_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:fontFamily="@font/aspira_medium"
+                android:text="@string/_account"
+                android:textColor="@color/oslo_grey"
+                android:textSize="@dimen/_10ssp"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/icon_selection_type"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginStart="@dimen/_30sdp"
+                tools:text="Account"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/account_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/aspira_demi"
+                android:maxLines="1"
+                android:textColor="@color/woodsmoke"
+                android:textSize="@dimen/_13ssp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toEndOf="@+id/icon_selection_type"
+                app:layout_constraintTop_toBottomOf="@+id/selection_name"
+                app:layout_goneMarginStart="@dimen/_12sdp"
+                app:layout_goneMarginTop="@dimen/_15sdp"
+                tools:text="Zain Shahid" />
+
+            <TextView
+                android:id="@+id/account_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/aspira_regular"
+                android:maxLines="1"
+                android:textColor="@color/woodsmoke"
+                android:textSize="@dimen/_12ssp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toEndOf="@+id/icon_selection_type"
+                app:layout_constraintTop_toBottomOf="@+id/account_title"
+                app:layout_goneMarginStart="@dimen/_12sdp"
+                app:layout_goneMarginTop="@dimen/_8sdp"
+                tools:text="8992342343209"
+                tools:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_55sdp"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_max="@dimen/_200sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/item_select_account_list"
+                tools:visibility="gone" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_hide_show_on_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="account_title,icon_selection_type" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/_15sdp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
